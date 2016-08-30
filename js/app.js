@@ -5,10 +5,7 @@ $(document).ready(function () {
 
   $('#buttons-container').on('click', 'span', function () {
     if ($(this).attr('id') === 'equals') {
-      // console.log('equals');
-      //parse through the stuffz
       var tester = screen.text().split('');
-      // console.log(tester);
       var count = 0;
       for (var i = 0; i < tester.length; i++) {
         if (tester[i] === '+') {
@@ -37,15 +34,6 @@ $(document).ready(function () {
       if (count > 1) {
         screen.text('error')
       }
-
-
-
-
-
-      // screen.text(add(parseInt(nums[0]), parseInt(nums[1])));
-
-
-
     } else if ($(this).attr('id') === 'clear') {
       screen.text('');
     } else {
