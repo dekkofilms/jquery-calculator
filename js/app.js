@@ -22,7 +22,11 @@ $(document).ready(function () {
         } else if (tester[i] === '÷') {
           count++;
           var equation = screen.text().split('÷');
-          screen.text(divide(parseInt(equation[0]), parseInt(equation[1])));
+          if (parseInt(equation[1]) === 0) {
+            screen.text('error');
+          } else {
+            screen.text(divide(parseInt(equation[0]), parseInt(equation[1])));
+          }
         } else if (tester[i] === '-') {
           count++;
           var equation = screen.text().split('-');
